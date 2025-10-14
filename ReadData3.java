@@ -9,10 +9,16 @@ public class ReadData
     public void read()
     {
         Scanner in;
+        Song [] songs = new Song[28372];
         try{
-            in = new Scanner(new File("songs 2025-2026.csv"));
+            int count = 1;
+            in = new Scanner(new File("songs 2025-2026 ANSI (3).csv"));
             while(in.hasNext()){
-                System.out.println(in.nextLine());
+                String line = in.nextLine();
+                System.out.println(count + ": " + line.split(";")[2]);
+                count++;
+
+
             }
             in.close();
         }
