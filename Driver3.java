@@ -3,5 +3,6 @@ public class Driver {
     {
         ReadData r = new ReadData();
         r.read();
+        System.out.println(r.getLongestTitle(mySongs));
     }
 }
