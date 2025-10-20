@@ -45,7 +45,7 @@ public class ReadData
     public String getLongestTitle(Song [] list)
             {
                 String longest = "";
-                for(int i = 0; i < 28371; i++)
+                for(int i = 0; i < 28372; i++)
                 {
                     String title = list[i].getTitle();
 
@@ -56,5 +56,17 @@ public class ReadData
                 }
 
             return longest;
+        }
+        public int danceability(Song[]list)
+        {
+            int highestDance = 0;
+            for(int i = 0; i < 28372; i++)
+            {
+                if(list[i].getDance() > .8)
+                {
+                    highestDance++;
+                }
+            }
+            return highestDance;
         }
 }
